@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -23,7 +23,7 @@ requirements:
     - python
     - numpy
     # pyqtgraph works with pyqt4 or pyqt5. Don't pin it here.
-    - pyqt
+    - pyqt 5.6.*
 
 test:
   imports:
