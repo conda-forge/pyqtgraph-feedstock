@@ -14,7 +14,7 @@ source:
   patches: bug-fix.patch
 
 build:
-  number: 5
+  number: 6
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   noarch: python
 
