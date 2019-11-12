@@ -24,7 +24,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python
+    - python <3.8
     - numpy
     # pyqtgraph works with pyqt4 or pyqt5. Don't pin it here.
     - pyqt
