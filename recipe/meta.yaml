@@ -11,10 +11,12 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   # For the next version of pyqtgraph this patch will not be necessary anymore (greater than 0.10.0)
-  patches: bug-fix.patch
+  patches:
+    - bug-fix.patch
+    - py38-fix.patch
 
 build:
-  number: 6
+  number: 7
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   noarch: python
 
