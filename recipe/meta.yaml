@@ -1,6 +1,6 @@
 {% set name = "pyqtgraph" %}
-{% set version = "0.10.0" %}
-{% set sha256 = "4c08ab34881fae5ecf9ddfe6c1220b9e41e6d3eb1579a7d8ef501abb8e509251" %}
+{% set version = "0.11.0rc0" %}
+{% set sha256 = "556a09aeafea537b9dd7e199bc5a6f05cea4ffee8aaf5a75f90aafeabe70155d" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ source:
     - py38-fix.patch
 
 build:
-  number: 7
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   noarch: python
 
