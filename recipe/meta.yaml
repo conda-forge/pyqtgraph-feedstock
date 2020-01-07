@@ -7,17 +7,16 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . -vv"
   noarch: python
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools
@@ -51,3 +50,4 @@ extra:
   recipe-maintainers:
     - astaric
     - marcelotrevisani
+    - ksunden
