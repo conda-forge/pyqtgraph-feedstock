@@ -1,27 +1,22 @@
 {% set name = "pyqtgraph" %}
-{% set version = "0.10.0" %}
-{% set sha256 = "4c08ab34881fae5ecf9ddfe6c1220b9e41e6d3eb1579a7d8ef501abb8e509251" %}
+{% set version = "0.11.0rc0" %}
+{% set sha256 = "556a09aeafea537b9dd7e199bc5a6f05cea4ffee8aaf5a75f90aafeabe70155d" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  # For the next version of pyqtgraph this patch will not be necessary anymore (greater than 0.10.0)
-  patches:
-    - bug-fix.patch
-    - py38-fix.patch
 
 build:
-  number: 7
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
   noarch: python
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools
@@ -55,3 +50,4 @@ extra:
   recipe-maintainers:
     - astaric
     - marcelotrevisani
+    - ksunden
