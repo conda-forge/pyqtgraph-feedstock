@@ -1,6 +1,6 @@
 {% set name = "pyqtgraph" %}
-{% set version = "0.11.0rc0" %}
-{% set sha256 = "556a09aeafea537b9dd7e199bc5a6f05cea4ffee8aaf5a75f90aafeabe70155d" %}
+{% set version = "0.11.0" %}
+{% set sha256 = "ca0a6715882579c46c80df18d9b260a09fce0e086521bfb6fc1f4027f938b35c" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -43,7 +43,7 @@ about:
     engineering applications. Despite being written entirely in python, the
     library is very fast due to its heavy leverage of numpy for number
     crunching and Qt's GraphicsView framework for fast display.
-  doc_url: http://www.pyqtgraph.org/documentation/ 
+  doc_url: http://www.pyqtgraph.org/documentation/
   dev_url: https://github.com/pyqtgraph/pyqtgraph
 
 extra:
