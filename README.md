@@ -5,7 +5,7 @@ Home: http://www.pyqtgraph.org
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Scientific Graphics and GUI Library for Python
 
