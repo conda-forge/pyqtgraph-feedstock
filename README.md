@@ -5,9 +5,13 @@ Home: http://www.pyqtgraph.org
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyqtgraph-feedstock/blob/master/LICENSE.txt)
 
 Summary: Scientific Graphics and GUI Library for Python
+
+Development: https://github.com/pyqtgraph/pyqtgraph
+
+Documentation: http://www.pyqtgraph.org/documentation/
 
 PyQtGraph is a pure-python graphics and GUI library built on PyQt4 /
 PySide and numpy. It is intended for use in mathematics / scientific /
