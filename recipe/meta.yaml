@@ -24,17 +24,14 @@ requirements:
     - python
     - numpy
   run_constrained:
-    # From the readme
-    # pyqtgraph has had some incompatibilities with PySide2 versions 5.6-5.11, and we recommend you avoid those versions if possible
     - pyside2 >=5.12
-    # pyqtgraph works with pyqt4 or pyqt5. Don't pin it here.
-    - pyqt
+    - pyqt >=5.12
 
 test:
   requires:
     # Add a requirement to the test phase.
     # Could be pyqt or pyside2
-    - pyqt
+    - pyqt >=5.12
   imports:
     - pyqtgraph
 
