@@ -1,6 +1,6 @@
 {% set name = "pyqtgraph" %}
-{% set version = "0.11.1" %}
-{% set sha256 = "7d1417f36b5b92d1365671633a91711513e5afbcc82f32475d0690317607714e" %}
+{% set version = "0.12.0" %}
+{% set sha256 = "35477023a1572c59d22a764af8584651b05e8ca76cdaef5feebdc532c1ee1135" %}
 
 package:
   name: {{ name|lower }}
@@ -17,24 +17,21 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
     - setuptools
   run:
-    - python
+    - python >=3.7
     - numpy
   run_constrained:
-    # From the readme
-    # pyqtgraph has had some incompatibilities with PySide2 versions 5.6-5.11, and we recommend you avoid those versions if possible
     - pyside2 >=5.12
-    # pyqtgraph works with pyqt4 or pyqt5. Don't pin it here.
-    - pyqt
+    - pyqt >=5.12
 
 test:
   requires:
     # Add a requirement to the test phase.
     # Could be pyqt or pyside2
-    - pyqt
+    - pyqt >=5.12
   imports:
     - pyqtgraph
 
