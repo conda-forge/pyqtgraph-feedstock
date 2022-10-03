@@ -1,33 +1,37 @@
 {% set name = "pyqtgraph" %}
-{% set version = "0.10.0" %}
-{% set sha256 = "4c08ab34881fae5ecf9ddfe6c1220b9e41e6d3eb1579a7d8ef501abb8e509251" %}
+{% set version = "0.13.1" %}
+{% set sha256 = "698f87f59db965727b33602a0b29058de21291d8b143dea878b50578aec0dc08" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 7
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.7
     - pip
     - setuptools
   run:
-    - python
+    - python >=3.7
     - numpy
-    # pyqtgraph works with pyqt4 or pyqt5. Don't pin it here.
-    - pyqt
+  run_constrained:
+    - pyside2 >=5.12
+    - pyqt >=5.12
 
 test:
+  requires:
+    # Add a requirement to the test phase.
+    # Could be pyqt or pyside2
+    - pyqt >=5.12
   imports:
     - pyqtgraph
 
@@ -44,10 +48,11 @@ about:
     engineering applications. Despite being written entirely in python, the
     library is very fast due to its heavy leverage of numpy for number
     crunching and Qt's GraphicsView framework for fast display.
-  doc_url: http://www.pyqtgraph.org/documentation/ 
+  doc_url: http://www.pyqtgraph.org/documentation/
   dev_url: https://github.com/pyqtgraph/pyqtgraph
 
 extra:
   recipe-maintainers:
     - astaric
     - marcelotrevisani
+    - ksunden
