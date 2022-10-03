@@ -11,27 +11,27 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - setuptools
   run:
-    - python >=3.7
-    - numpy
+    - python >=3.8
+    - numpy >=1.20
   run_constrained:
-    - pyside2 >=5.12
-    - pyqt >=5.12
+    - pyside2 >=5.15
+    - pyqt >=5.15
 
 test:
   requires:
     # Add a requirement to the test phase.
     # Could be pyqt or pyside2
-    - pyqt >=5.12
+    - pyqt >=5.15
   imports:
     - pyqtgraph
 
@@ -43,7 +43,7 @@ about:
   summary: Scientific Graphics and GUI Library for Python
 
   description: |
-    PyQtGraph is a pure-python graphics and GUI library built on PyQt4 / 
+    PyQtGraph is a pure-python graphics and GUI library built on PyQt / 
     PySide and numpy. It is intended for use in mathematics / scientific / 
     engineering applications. Despite being written entirely in python, the
     library is very fast due to its heavy leverage of numpy for number
