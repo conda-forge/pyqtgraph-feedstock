@@ -1,11 +1,11 @@
-About pyqtgraph
-===============
+About pyqtgraph-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyqtgraph-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.pyqtgraph.org
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyqtgraph-feedstock/blob/main/LICENSE.txt)
 
 Summary: Scientific Graphics and GUI Library for Python
 
@@ -13,7 +13,7 @@ Development: https://github.com/pyqtgraph/pyqtgraph
 
 Documentation: http://www.pyqtgraph.org/documentation/
 
-PyQtGraph is a pure-python graphics and GUI library built on PyQt4 /
+PyQtGraph is a pure-python graphics and GUI library built on PyQt /
 PySide and numpy. It is intended for use in mathematics / scientific /
 engineering applications. Despite being written entirely in python, the
 library is very fast due to its heavy leverage of numpy for number
