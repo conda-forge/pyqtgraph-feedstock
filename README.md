@@ -155,6 +155,7 @@ Feedstock Maintainers
 =====================
 
 * [@astaric](https://github.com/astaric/)
+* [@j9ac9k](https://github.com/j9ac9k/)
 * [@ksunden](https://github.com/ksunden/)
 * [@marcelotrevisani](https://github.com/marcelotrevisani/)
 
