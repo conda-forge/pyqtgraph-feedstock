@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -21,8 +21,8 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >=3.8
-    - numpy >=1.20
+    - python >=3.9
+    - numpy >=1.22
   run_constrained:
     - pyside2 >=5.15
     - pyqt >=5.15
