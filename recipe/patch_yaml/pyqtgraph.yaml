@@ -1,8 +1,0 @@
-if:
-  name: pyqtgraph
-  version: "0.13.4"
-  build_number: 0
-then:
-  - replace_depends:
-      old: python >=3.8
-      new: python >=3.9

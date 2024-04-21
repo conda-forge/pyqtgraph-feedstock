@@ -1,6 +1,6 @@
 {% set name = "pyqtgraph" %}
-{% set version = "0.13.4" %}
-{% set sha256 = "67b0d371405c4fd5f35afecfeb37d4b73bc118f187c52a965ed68d62f59b67b3" %}
+{% set version = "0.13.5" %}
+{% set sha256 = "e3b05a513da4a837055c0f8e26506f142478b2ebe9854085bf63faf84625623e" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
