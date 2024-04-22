@@ -1,6 +1,6 @@
 {% set name = "pyqtgraph" %}
-{% set version = "0.13.5" %}
-{% set sha256 = "e3b05a513da4a837055c0f8e26506f142478b2ebe9854085bf63faf84625623e" %}
+{% set version = "0.13.6" %}
+{% set sha256 = "2397a2197e7ac66920329bf28fb346b038d85a351f8988ccc806ffb79d11573d" %}
 
 package:
   name: {{ name|lower }}
